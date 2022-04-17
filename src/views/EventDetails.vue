@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="event">
     <h1>{{ event.title }}</h1>
     <p>{{ event.title }} is on {{ event.date }} @ {{ event.location }}</p>
   </div>
@@ -14,7 +14,7 @@ export default {
   },
   data() {
     return {
-      event: {}
+      event: null
     }
   },
   created() {
